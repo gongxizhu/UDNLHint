@@ -1,0 +1,74 @@
+#dvOrderHeader {
+    .order-header {
+        height: 40px;
+        width: 100%;
+        border: none;
+        background-color: #000F60;
+        align-items: center;
+        padding-top: 5px;
+
+        .titles {
+            margin-left: 2px;
+            font-family: Microsoft YaHei;
+            font-size: 20px;
+            color: #FFFFFF;
+            font-weight: bold;
+            margin-left: 1%;
+        }
+
+        .sub-titles {
+            font-family: Microsoft YaHei;
+            font-size: 14px;
+            color: #FFFFFF;
+            margin-left: 3%;
+        }
+    }
+
+    .order-menu {
+        height: 45px;
+        width: 100%;
+        border: none;
+        background-color: #0025A2;
+        font-family: Microsoft YaHei;
+        font-size: 14px;
+    }
+
+    .user-info(@top:3px) {
+        font-family: Microsoft YaHei;
+        font-size: 14px;
+        color: #FFFFFF;
+        position: relative;
+        display: inline-flex;
+        top: @top;
+    }
+
+    .user-info-1 {
+        .user-info(3px);
+    }
+
+    .user-info-2 {
+        .user-info(10px);
+    }
+}
+
+.mat-menu-sub-router-item+* .cdk-overlay-pane {
+    .mat-menu-panel {
+        background-color: #0025A2;
+        opacity: .90;
+        margin: -3px 0 0;
+
+        .mat-menu-item {
+            color: white;
+            opacity: 1;
+        }
+
+        .mat-menu-item-active {
+            font-weight: bold;
+            font-size: 16px;
+        }
+    }
+}
+
+#dvBaseRouterOutlet {
+    overflow-y: auto;
+}

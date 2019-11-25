@@ -1,0 +1,117 @@
+<app-loading [visible]="displayLoader"></app-loading>
+<div id="dvCreateOrder">
+  <div class="section-title">{{title}}</div>
+  <div class="container-fluid groupbox-content">
+    <form>
+      <div>
+        <div class="row">
+          <div class="cell col">
+            <div class="button-row-left">
+              <button class="form-control btn btn-primary">Create Order</button>
+            </div>
+          </div>
+          <div class="cell col">
+            <div class="button-row-left">
+                <button class="form-control btn btn-secondary">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell col">
+            <div class="text-row-left">
+              <label class="text-danger">Sales Type: </label><label class="text-danger"></label>
+              <select class="form-control no-highlight">
+                <option  *ngFor="let salesType of dsSalesTypes" value={{salesType.value}}>
+                  {{salesType.item}}
+                </option>
+              </select>
+            </div>
+            <!-- <mat-form-field>
+                    <input matInput class="mat-form-placeholder">
+                    <label>Sales Type</label><label class="text-danger"></label>
+                    <kendo-dropdownlist class="form-control" formControlName="salesType"
+                        [data]="dsSalesTypes" [textField]="'item'"
+                        [valueField]="'value'" [valuePrimitive]="true">
+                    </kendo-dropdownlist>
+                  </mat-form-field> -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell col">
+            <div class="text-row-left">
+              <label class="text-danger">Service Type: </label>
+              <select class="form-control no-highlight">
+                <option *ngFor="let serviceType of dsServiceType" value={{serviceType.value}}>
+                  {{serviceType.item}}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell col">
+            <div class="text-row-left">
+              <label class="text-danger">Chassis: </label>
+              <input id="chassis" type="text" class="form-control no-highlight" (focusout)="onChassisFocusOut()"/>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell col">
+            <div class="text-row-left">
+              <label class="text-danger">Mileage: </label>
+              <input type="text" class="form-control no-highlight" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell col">
+            <div class="text-row-left">
+              <label class="text-danger">Notes: </label>
+              <input id="note" type="text" class="form-control no-highlight" (focusout)="onNoteFocusOut()" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="cell col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Line type</th>
+              <th>Id</th>
+              <th>Description</th>
+              <th>Confidence(%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let orderline of dsOrderlines" [ngStyle]="{'background-color': orderline.confidence >= 70 ? 'green' : (orderline.confidence >= 40 ? 'lightgreen' : 'lightblue' ) }">
+              <td>
+                <input class="form-check" type="checkbox"/>
+              </td>
+              <td>{{ orderline.linetype }}</td>
+              <td>{{ orderline.id }}</td>
+              <td>{{ orderline.description }}</td>
+              <td>{{ orderline.confidence }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <kendo-grid [data]="gridSetting.data" [pageSize]="gridSetting.pageSize" [skip]="gridSetting.skip"
+                  [sort]="gridSetting.sort" [pageable]="gridSetting.pageable" [sortable]="gridSetting.sortable"
+                  [scrollable]="gridSetting.scrollable" [selectable]="gridSetting.selectable"
+                  [resizable]="gridSetting.resizable" [height]="gridSetting.height">
+                  <kendo-grid-column field="lineType" title="Line Type" width="90px">
+                  </kendo-grid-column>
+                  <kendo-grid-column field="id" title="Part/LaborId" width="170px">
+                  </kendo-grid-column>
+                  <kendo-grid-column field="description" title="Description" width="300px">
+                  </kendo-grid-column>
+                  <kendo-grid-column field="price" title="Price" width="105px">
+                  </kendo-grid-column>
+              </kendo-grid> -->
+      </div>
+    </div>
+  </div>
+</div>

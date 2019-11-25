@@ -1,0 +1,35 @@
+<div *ngIf="showHeader">
+  <div id="dvOrderHeader" class="container-fluid">
+      <div class="row">
+          <div class="cell col order-header">
+              <div class="row">
+                  <div class="cell col-9">
+                      <span class="titles">{{title}}</span>
+                  </div>
+                  <div class="cell col-3">
+                      <div class="text-right">
+                          <span class="user-info-1"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="cell col order-menu">
+              <div class="row">
+                  <div class="cell col-9">
+                  </div>
+                  <div class="cell col-3">
+                      <div class="text-right">
+                          <span class="user-info-2"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<app-loading [visible]="displayLoader"></app-loading>
+<div id="dvBaseRouterOutlet" [style.height.px]="baseRouterOutletHeight">
+  <router-outlet></router-outlet>
+</div>

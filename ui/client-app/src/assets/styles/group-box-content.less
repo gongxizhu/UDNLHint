@@ -1,0 +1,152 @@
+.groupbox-content {
+    background-color: #F5F6FB;
+    max-width: calc(100% - 30px);
+    padding-top: 5px;
+
+    mat-tab-group {
+        width: 100%;
+    }
+
+    .row {
+        padding: 0;
+        margin-left: 2px;
+        padding-top: 0;
+        margin-right: 0;
+        justify-content: flex-end;
+
+        .kendo-datepicker-field {
+            label {
+                font-size: 12px;
+                white-space: nowrap;
+                width: auto;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 1.125;
+                display: inline-flex;
+                font-family: Arial, "MS Gothic", "Helvetica", "Lucida sans";
+            }
+
+            .form-control-date {
+                padding: 0;
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        .cell,
+        .col {
+            padding-left: 20px;
+            padding-right: 30px;
+            min-width: 30px;
+
+            .button-row {
+                margin-left: 70%;
+                margin-top: -15px;
+            }
+
+            mat-form-field {
+                padding-bottom: 0;
+
+                .mat-form-field-suffix {
+                    flex: 1;
+                    justify-content: flex-end;
+                    position: relative;
+                    vertical-align: middle;
+                }
+            }
+
+            label {
+                color: #000F60;
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: .3rem;
+            }
+
+            .alert-link {
+                margin: 10px auto;
+                font-weight: bold;
+                color: #3333CC;
+                font-size: 12px;
+            }
+        }
+
+        .form-control {
+            height: 2rem;
+            font-size: 12px;
+        }
+
+        textarea.form-control {
+            padding: 5px;
+        }
+
+        kendo-multiselect.form-control {
+            margin-top: .3rem;
+            padding-left: 0 !important;
+
+            div.k-multiselect-wrap {
+                cursor: default;
+            }
+
+            .k-multiselect-wrap {
+                height: 2rem;
+                padding: 5px;
+                font-size: 12px;
+                top: -6px;
+                border: 1px solid #CED4DA;
+                border-radius: .25rem;
+
+                kendo-taglist {
+                    li {
+                        top: -3.5px;
+                    }
+                }
+
+                kendo-searchbar {
+                    margin-top: -6px;
+                }
+            }
+
+            kendo-taglist {
+                li,
+                li:active,
+                li:hover {
+                    width: calc(100% - 20px);
+                    background-color: white !important;
+                    background-image: none !important;
+                    border-color: white !important;
+
+                    span:nth-child(1) {
+                        width: 100%;
+                    }
+
+                    .k-icon.k-i-close {
+                        display: none;
+                    }
+                }
+            }
+
+            kendo-searchbar {
+                input {
+                    width: 0;
+                    cursor: default;
+                }
+            }
+        }
+
+        kendo-dropdownlist.form-control {
+            margin-top: .3rem;
+
+            .k-dropdown-wrap {
+                height: 2rem;
+                font-size: 12px;
+                top: -6px;
+                border: 1px solid #CED4DA;
+                border-radius: .25rem;
+
+                span.k-input {
+                    margin-top: -2px;
+                }
+            }
+        }
+    }
+}

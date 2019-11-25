@@ -1,0 +1,235 @@
+.full-screen-dialog {
+    height: 100%;
+    width: 100%;
+    max-width: none !important;
+
+    .mat-dialog-container {
+        max-width: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mat-dialog-content {
+        max-height: 85%;
+    }
+}
+
+.mat-tab-group.mat-warn .mat-ink-bar,
+.mat-tab-nav-bar.mat-warn .mat-ink-bar {
+    height: 5px;
+    background-color: lightskyblue;
+}
+
+.mat-expansion-panel-header {
+    height: 40px !important;
+}
+
+.mat-icon-clickable {
+    cursor: pointer;
+}
+
+.mat-icon-clear {
+    .mat-icon-clickable();
+    position: absolute;
+    top: 14px;
+    left: -15px;
+    font-size: 16px !important;
+    opacity: .5;
+    transition: opacity .3s ease;
+    color: black;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.mat-icon-search {
+    .mat-icon-clickable();
+    position: absolute;
+    top: 14px;
+    left: 2px;
+    font-size: 16px !important;
+}
+
+.mat-icon-grid-header {
+    .mat-icon-clickable();
+    height: auto !important;
+    width: auto !important;
+}
+
+.mat-form-field-underline {
+    display: none;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+#input-form-control() {
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+
+.mat-input-element {
+    #input-form-control() !important;
+}
+
+.mat-form-field-infix {
+    border-top: 0;
+    width: 100% !important;
+}
+
+.button-row {
+    a,
+    button {
+        margin-right: 8px;
+    }
+}
+
+.button-row-left {
+    margin: 15px 0 0;
+
+    mat-icon {
+        text-align: left;
+        width: auto;
+
+        mat-label {
+            color: black;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Microsoft YaHei';
+        }
+    }
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+}
+
+.mat-tooltip-size(@font-size:8pt) {
+    font-size: @font-size;
+}
+
+.mat-tooltip-size-md {
+    .mat-tooltip-size(12pt);
+}
+
+.mat-tool-tip-wrap {
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.mat-raised-button {
+    .btn-common(@background-color, @width) {
+        font-size: 12px;
+        background: @background-color;
+        width: @width;
+        height: 25px;
+        line-height: 10px;
+        color: #FFFFFF;
+        margin-right: 20px;
+        border-radius: 5px;
+        text-align: center;
+
+        &:hover {
+            font-size: 14px;
+            font-weight: bold;
+            opacity: .75;
+        }
+    }
+
+    &.btn-primary {
+        .btn-common(#0025A2, 110px);
+    }
+
+    &.btn-default {
+        .btn-common(#666666, 100px);
+    }
+}
+
+.mat-form-field-flex {
+    margin-top: -5px;
+}
+
+.mat-form-field-appearance-legacy {
+    .mat-form-field-infix {
+        padding: 2px 0;
+    }
+}
+
+.mat-form-field {
+    label {
+        font-weight: bold;
+        font-family: Arial, "MS Gothic", "Helvetica", "Lucida sans";
+    }
+
+    input {
+        &.no-border[readonly] {
+            border: 0 !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+        }
+
+        &.no-highlight[readonly] {
+            box-shadow: none !important;
+            background-color: #F5F5ED !important;
+        }
+    }
+
+    textarea {
+        resize: none !important;
+        height: 100px !important;
+
+        &.no-border[readonly] {
+            border: 0 !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+        }
+
+        &.no-highlight[readonly] {
+            box-shadow: none !important;
+            background-color: #F5F5ED !important;
+        }
+    }
+}
+
+.mat-tab-nav-bar.mat-background-primary .mat-tab-links {
+    height: 45px;
+    background-color: #0025A2 !important;
+    font-family: Arial;
+    font-size: 14px;
+
+    .mat-tab-link.mat-tab-label-active {
+        opacity: 1 !important;
+        font-weight: bold;
+    }
+
+    .mat-tab-link:not(.mat-tab-label-active) {
+        opacity: .8 !important;
+    }
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+}
+
+.span-button-place-holder-primary {
+    margin-right: 130px;
+}
+
+.span-button-place-holder-default {
+    margin-right: 120px;
+}
+
+.mat-form-placeholder {
+    display: none;
+}
+
+mat-slide-toggle {
+    border: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
