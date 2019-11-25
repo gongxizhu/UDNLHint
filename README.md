@@ -10,6 +10,15 @@ Use Seq2Seq model for order line prediction; Use tokenized words from descriptio
 Use Azure Translation API for translating all non-English texts to English
 https://azure.microsoft.com/en-us/services/cognitive-services/translator-text-api/
 
+# Requirements
+  1. Tensorflow >= 1.8
+  2. Pandas
+  3. Numpy
+  4. flask
+  5. json
+  6. argparse
+  7. pymssql
+  
 # To Run backend
 python src/program.py
 
